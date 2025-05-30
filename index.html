@@ -18,8 +18,10 @@
     }
 
     .site-background {
-      background: url('img/bg.jpg') no-repeat center center fixed;
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
       min-height: 100%;
       display: flex;
       flex-direction: column;
@@ -97,8 +99,8 @@
       display: block;
       margin: 0 auto;
     }
-	
-	.home-title {
+
+    .home-title {
       text-align: center;
     }
 
@@ -112,25 +114,25 @@
         max-width: 150px;
       }
     }
-	
-	.bottom-image-wrapper {
-	margin-top: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	}
 
-	.hover-expand-image {
-	width: 100px;
-	height: auto;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	border-radius: 10px;
-	}
+    .bottom-image-wrapper {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-	.hover-expand-image:hover {
-	transform: scale(1.1);
-	cursor: pointer;
-	}
+    .hover-expand-image {
+      width: 100px;
+      height: auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+    }
+
+    .hover-expand-image:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
 
   </style>
 </head>
@@ -150,12 +152,12 @@
       <h2 class="home-title">Discord Wars by dilk.club - Season 1<br><br></h2>
       <img src="img/ip.gif" alt="Server IP" class="responsive-image">
       <p><br>Welcome to what we're hoping will be the first of many seasons of Discord Wars! We pretty much all steam through Minecraft 1-2 times a year, the goal of this server is to have all of our groups do so in one place with a dash of competition.<br> <br>Each group can make their team in game and players will earn points for their team as they progress through the game at it's various milestones. Team/group points will be displayed via in game leaderboard. The specifics of what will earn how many points is still being worked out and once we have it finalized they will be added to the "Game Objectives" page.<br><br> Join the Discord using the link below to stay up to date, ask questions or give suggestions!</p>
-    <div class="bottom-image-wrapper">
-			<a href="https://discord.com/invite/7xfARtcPNR" target="_blank">
-				<img src="img/discord.png" alt="Click Me" class="hover-expand-image">
-			</a>
-		</div>
-	</div>
+      <div class="bottom-image-wrapper">
+        <a href="https://discord.com/invite/7xfARtcPNR" target="_blank">
+          <img src="img/discord.png" alt="Click Me" class="hover-expand-image">
+        </a>
+      </div>
+    </div>
 
     <div id="tab2" class="tab-content">
       <h2 class="home-title">TBA<br><br></h2>
@@ -175,6 +177,17 @@
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
     }
+
+    const backgrounds = [
+      'img/bg1.jpg',
+      'img/bg2.jpg',
+      'img/bg3.jpg',
+      'img/bg4.jpg',
+      'img/bg5.jpg',
+      'img/bg6.jpg'
+    ];
+    const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+    document.querySelector('.site-background').style.backgroundImage = `url('${randomBg}')`;
   </script>
 </body>
 </html>
