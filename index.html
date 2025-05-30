@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC - dilk.club</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    .site-background {
+      background: url('img/bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    nav {
+      margin-bottom: 15px;
+    }
+
+    .tab-button {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      padding: 10px 20px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      margin: 0 5px;
+      border-radius: 5px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: background 0.3s ease;
+    }
+
+    .tab-button:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .tab-content {
+      display: none;
+      max-width: 800px;
+      width: 90%;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .placeholder-img {
+      width: 100%;
+      height: 200px;
+      background-color: rgba(200, 200, 200, 0.2);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #eee;
+      font-size: 18px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border-radius: 10px;
+    }
+
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+	
+	.home-title {
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .tab-button {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .logo img {
+        max-width: 150px;
+      }
+    }
+	
+	.bottom-image-wrapper {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+
+	.hover-expand-image {
+	width: 100px;
+	height: auto;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border-radius: 10px;
+	}
+
+	.hover-expand-image:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	}
+
+  </style>
+</head>
+<body>
+  <div class="site-background">
+    <div class="logo">
+      <img src="img/dilk.gif" alt="Site Logo">
+    </div>
+
+    <nav>
+      <button class="tab-button" onclick="showTab('tab1')">Home</button>
+      <button class="tab-button" onclick="showTab('tab2')">Game Objectives</button>
+      <button class="tab-button" onclick="showTab('tab3')">Rules</button>
+    </nav>
+
+    <div id="tab1" class="tab-content active">
+      <h2 class="home-title">Discord Wars by dilk.club - Season 1<br><br></h2>
+      <img src="img/ip.gif" alt="Server IP" class="responsive-image">
+      <p><br>Welcome to what we're hoping will be the first of many seasons of Discord Wars! We pretty much all steam through Minecraft 1-2 times a year, the goal of this server is to have all of our groups do so in one place with a dash of competition.<br> <br>Each group can make their team in game and players will earn points for their team as they progress through the game at it's various milestones. Team/group points will be displayed via in game leaderboard. The specifics of what will earn how many points is still being worked out and once we have it finalized they will be added to the "Game Objectives" page.<br><br> Join the Discord using the link below to stay up to date, ask questions or give suggestions!</p>
+    <div class="bottom-image-wrapper">
+			<a href="https://discord.com/invite/7xfARtcPNR" target="_blank">
+				<img src="img/discord.png" alt="Click Me" class="hover-expand-image">
+			</a>
+		</div>
+	</div>
+
+    <div id="tab2" class="tab-content">
+      <h2 class="home-title">TBA<br><br></h2>
+      <img src="img/comingsoon.jpg" alt="Coming Soon" class="responsive-image">
+      <p><br><br>These should be finalized in the coming weeks. :-)</p>
+    </div>
+
+    <div id="tab3" class="tab-content">
+      <h2>Rules</h2>
+      <p><br>We're adults, there are no fucking rules. But if enough players collectively deem you a fun sucking vulture, you're probably getting yeeted.</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
