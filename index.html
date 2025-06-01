@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MC - dilk.club</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -133,11 +134,22 @@
       transform: scale(1.1);
       cursor: pointer;
     }
-	
-	#leaderboard-content {
-		text-align: center;
-	}
 
+    #leaderboard-content {
+      text-align: center;
+      font-weight: bold;
+      font-size: 50px;
+      font-family: 'MinecraftRegular', sans-serif;
+    }
+
+    @font-face {
+      font-family: 'MinecraftRegular';
+      src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    }
+	
+	h3 {
+      text-align: center;
+	}
   </style>
 </head>
 <body>
@@ -148,7 +160,7 @@
 
     <nav>
       <button class="tab-button" onclick="showTab('tab1')">Home</button>
-	  <button class="tab-button" onclick="showTab('tab2')">Leaderboard</button>
+      <button class="tab-button" onclick="showTab('tab2')">Leaderboard</button>
       <button class="tab-button" onclick="showTab('tab3')">Game Objectives</button>
       <button class="tab-button" onclick="showTab('tab4')">Rules</button>
     </nav>
@@ -156,32 +168,52 @@
     <div id="tab1" class="tab-content active">
       <h2 class="home-title">Discord Wars by dilk.club - Season 1<br><br></h2>
       <img src="img/ip.gif" alt="Server IP" class="responsive-image">
-      <p><br>Welcome to what we're hoping will be the first of many seasons of Discord Wars! We pretty much all steam through Minecraft 1-2 times a year, the goal of this server is to have all of our groups do so in one place with a dash of competition.<br> <br>Each group can make their team in game and players will earn points for their team as they progress through the game at it's various milestones. Team/group points will be displayed via in game leaderboard. The specifics of what will earn how many points is still being worked out and once we have it finalized they will be added to the "Game Objectives" page.<br><br> Join the Discord using the link below to stay up to date, ask questions or give suggestions!</p>
+      <p><br>Welcome to what we're hoping will be the first of many seasons of Discord Wars! We pretty much all steam through Minecraft 1-2 times a year, the goal of this server is to have all of our groups do so in one place with a dash of competition.<br><br>Each group can make their team in game and players will earn points for their team as they progress through the game at its various milestones. Team/group points will be displayed via in-game leaderboard. The specifics of what will earn how many points is still being worked out and once we have it finalized they will be added to the "Game Objectives" page.<br><br>Join the Discord using the link below to stay up to date, ask questions or give suggestions!</p>
       <div class="bottom-image-wrapper">
         <a href="https://discord.com/invite/7xfARtcPNR" target="_blank">
           <img src="img/discord.png" alt="Click Me" class="hover-expand-image">
         </a>
       </div>
     </div>
-	
-	<div id="tab2" class="tab-content">
-		<h2 class="home-title">Leaderboard<br><br></h2>
-		<div id="leaderboard-content">
+
+    <div id="tab2" class="tab-content">
+      <h2 class="home-title">Leaderboard<br><br></h2>
+      <div id="leaderboard-content">
         <p>Loading leaderboard...</p>
-		</div>
+      </div>
+    </div>
+
+	<div id="tab3" class="tab-content">
+	  <h2 class="home-title">Objectives / Quests<br><br></h2>
+	  <p><br><br>Once in game you can use <code>/q</code> to open the quests menu. Inside you can see all active quests you have, your progress towards them etc. Upon completing one, you'll be credited points. When you use the TAB key to see the player list in game, you'll be able to see the number of points individuals have. Team scores are displayed on the website "Leaderboard" tab. The objectives/quests are broken down into categories:<br><br></p>
+
+	  <h3>Mining<br><br></h3>
+	  <p>Mining quests can be as simple as mine one diamond, others might require that you've mined a stack or that you've mined a variety of ore blocks.<br><br></p>
+
+	  <h3>Crafting<br><br></h3>
+	  <p>Crafting quests are rewarded for crafting various items in the game.<br><br></p>
+
+	  <h3>Building<br><br></h3>
+	  <p>Building quests will be based on placing certain blocks, certain numbers of blocks and placing certain cosmetic style blocks.<br><br></p>
+
+	  <h3>Combat<br><br></h3>
+	  <p>Combat quests will contain objectives like kill X number of mobs, kill X types of mobs, kill X number of players etc.<br><br></p>
+
+	  <h3>Hidden<br><br></h3>
+	  <p>Hidden quests will be akin to hidden achievements on Steam. You'll know what they are if you accomplish them. In the name of fairness, dilk.club members privy to their objectives are ineligible to earn them.<br><br></p>
+
+	  <h3>Screenshot/Video<br><br></h3>
+	  <p>Screenshot/Video quests require you submit a photo or video of various in-game things. An example could be "build a redstone contraption." You would submit your video/screenshot on the Discord for manual verification. Once again, in the name of fairness, any dilk.club members require other players to approve any submissions they make.<br><br></p>
+
+	  <h3>Achievements<br><br></h3>
+	  <p>Some quests will match in-game achievements, for example, killing a ghast with a fireball (Return to Sender).</p>
 	</div>
 
-    <div id="tab3" class="tab-content">
-      <h2 class="home-title">TBA<br><br></h2>
-      <img src="img/comingsoon.jpg" alt="Coming Soon" class="responsive-image">
-      <p><br><br>These should be finalized in the coming weeks. :-)</p>
-    </div>
 
     <div id="tab4" class="tab-content">
       <h2>Rules</h2>
-      <p><br>We're adults, there are no fucking rules. But if enough players collectively deem you a fun sucking vulture, you're probably getting yeeted.</p>
+      <p><br>We're adults, there are no rules. But if enough players collectively deem you a fun-sucking vulture, you're probably getting yeeted.</p>
     </div>
-	
   </div>
 
   <script>
@@ -201,64 +233,74 @@
     ];
     const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
     document.querySelector('.site-background').style.backgroundImage = `url('${randomBg}')`;
-	
-	document.addEventListener("DOMContentLoaded", function () {
-		const url = "https://teamscores.dilk.club/team_balances.txt";
-		const leaderboardContent = document.getElementById("leaderboard-content");
 
-		function fetchLeaderboard() {
-			fetch(url)
-				.then(response => response.text())
-				.then(text => {
-					const formattedText = applyMinecraftColors(text);
-					leaderboardContent.innerHTML = formattedText;
-				})
-				.catch(error => {
-					console.error("Error fetching leaderboard:", error);
-					leaderboardContent.innerHTML = "<p>Failed to load leaderboard.</p>";
-				});
-		}
+    document.addEventListener("DOMContentLoaded", function () {
+      const url = "https://teamscores.dilk.club/team_balances.txt";
+      const leaderboardContent = document.getElementById("leaderboard-content");
 
-		function applyMinecraftColors(text) {
-			const colorMap = {
-				"0": "black", "1": "darkblue", "2": "darkgreen", "3": "darkcyan",
-				"4": "darkred", "5": "purple", "6": "gold", "7": "gray",
-				"8": "darkgray", "9": "blue", "a": "green", "b": "cyan",
-				"c": "red", "d": "lightpurple", "e": "yellow", "f": "white"
-			};
+      function fetchLeaderboard() {
+        fetch(url)
+          .then(response => response.text())
+          .then(text => {
+            const lines = text.split("\n")
+              .map(line => {
+                const [name, score] = line.split(" - ");
+                return { name, score: parseFloat(score) || 0 };
+              })
+              .filter(entry => entry.name && !isNaN(entry.score));
 
-			return text.split("\n").map(line => {
-				const [left, ...rightParts] = line.split("-");
-				const right = rightParts.join("-");
+            lines.sort((a, b) => b.score - a.score);
 
-				let result = "";
-				let openTag = "";
-				let i = 0;
+            const formattedText = applyMinecraftColors(
+              lines.map(entry => `${entry.name} - ${entry.score}`).join("\n")
+            );
 
-				while (i < left.length) {
-					if (left[i] === "&" && i + 1 < left.length && colorMap[left[i + 1]]) {
-						if (openTag) result += "</span>"; // close previous tag
-						const color = colorMap[left[i + 1]];
-						result += `<span style="color: ${color};">`;
-						openTag = "</span>";
-						i += 2;
-					} else {
-						result += left[i];
-						i++;
-					}
-				}
+            leaderboardContent.innerHTML = formattedText;
+          })
+          .catch(error => {
+            console.error("Error fetching leaderboard:", error);
+            leaderboardContent.innerHTML = "<p>Failed to load leaderboard.</p>";
+          });
+      }
 
-				if (openTag) result += "</span>"; // close last tag if needed
+      function applyMinecraftColors(text) {
+        const colorMap = {
+          "0": "black", "1": "darkblue", "2": "darkgreen", "3": "darkcyan",
+          "4": "darkred", "5": "purple", "6": "gold", "7": "gray",
+          "8": "darkgray", "9": "blue", "a": "green", "b": "cyan",
+          "c": "red", "d": "lightpurple", "e": "yellow", "f": "white"
+        };
 
-				return result + (right ? ` - ${right}` : "");
-			}).join("<br>");
-		}
+        return text.split("\n").map(line => {
+          const [left, ...rightParts] = line.split("-");
+          const right = rightParts.join("-");
 
-		fetchLeaderboard();
-		setInterval(fetchLeaderboard, 5000); // Refresh every 5 seconds
-	});
+          let result = "";
+          let openTag = "";
+          let i = 0;
 
-	
+          while (i < left.length) {
+            if (left[i] === "&" && i + 1 < left.length && colorMap[left[i + 1]]) {
+              if (openTag) result += "</span>";
+              const color = colorMap[left[i + 1]];
+              result += `<span style="color: ${color}; font-family: 'MinecraftRegular', sans-serif;">`;
+              openTag = "</span>";
+              i += 2;
+            } else {
+              result += left[i];
+              i++;
+            }
+          }
+
+          if (openTag) result += "</span>";
+
+          return result + (right ? ` - ${right}` : "");
+        }).join("<br>");
+      }
+
+      fetchLeaderboard();
+      setInterval(fetchLeaderboard, 5000);
+    });
   </script>
 </body>
 </html>
